@@ -2,14 +2,14 @@
 
 Name: modbus-utils
 Version: 1.0.0
-Release: alt1
+Release: alt2
 
 Summary: CLI utilities to work with Modbus devices
 License: %mit
 
 BuildRequires(pre): rpm-build-licenses
 BuildRequires(pre): rpm-macros-cmake
-Group: Other
+Group: Engineering
 Url: https://github.com/Krzysztow/modbus-utils
 Source0: %name-%version.tar
 
@@ -24,13 +24,15 @@ Client and server CLI utilities to work with Modbus devices
 
 %build
 %cmake
+
 %install
 %cmakeinstall_std
+
 %files
 %_bindir/modbus_client
 %_bindir/modbus_server
 
 %changelog
-* Tue Aug 10 2021 Aleksey Saprunov <sav@altlinux.org> 1.0.0-alt1
+* Tue Aug 10 2021 Aleksey Saprunov <sav@altlinux.org> 1.0.0-alt2
 - Initial release
 
